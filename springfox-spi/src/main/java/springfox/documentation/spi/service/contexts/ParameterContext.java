@@ -44,7 +44,7 @@ public class ParameterContext {
       OperationContext operationContext) {
 
     this.parameterBuilder = new ParameterBuilder();
-    this.requestParameterBuilder = new RequestParameterBuilder();
+    this.requestParameterBuilder = new RequestParameterBuilder().accepts(operationContext.consumes());
     this.resolvedMethodParameter = resolvedMethodParameter;
     this.documentationContext = documentationContext;
     this.genericNamingStrategy = genericNamingStrategy;

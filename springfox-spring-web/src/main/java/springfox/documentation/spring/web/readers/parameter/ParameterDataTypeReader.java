@@ -147,7 +147,7 @@ public class ParameterDataTypeReader implements ParameterBuilderPlugin {
                 nameExtractor).apply(parameterType)));
     context.requestParameterBuilder()
         .simpleParameterBuilder() //TODO: check this is correct
-        .build();
+        .yield();
   }
 
   private boolean treatRequestParamAsString(ResolvedType parameterType) {

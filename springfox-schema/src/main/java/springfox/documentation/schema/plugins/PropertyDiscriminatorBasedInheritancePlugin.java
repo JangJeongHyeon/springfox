@@ -67,6 +67,8 @@ public class PropertyDiscriminatorBasedInheritancePlugin implements ModelBuilder
       context.getBuilder()
           .discriminator(discriminator(context))
           .subTypes(modelRefs);
+      //TODO: apply to new model specs
+
     }
   }
 

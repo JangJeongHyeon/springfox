@@ -9,13 +9,21 @@ import java.util.TreeSet;
 
 public class ContentSpecification {
   private final SortedSet<MediaType> mediaTypes = new TreeSet<>(Comparator.comparing(MediaType::getMediaType));
+  private final boolean requestBody;
 
-  public ContentSpecification(Set<MediaType> mediaTypes) {
+  public ContentSpecification(
+      boolean requestBody,
+      Set<MediaType> mediaTypes) {
+    this.requestBody = requestBody;
     this.mediaTypes.addAll(mediaTypes);
   }
 
   public SortedSet<MediaType> getMediaTypes() {
     return mediaTypes;
+  }
+
+  public boolean isRequestBody() {
+    return requestBody;
   }
 
   @Override

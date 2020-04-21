@@ -114,7 +114,7 @@ public abstract class AbstractOperationParameterRequestConditionReader implement
               .name(expression.getName())
               .scalarModel(ScalarType.STRING)
               .build())
-          .build()
+          .yield()
           .in(parameterType)
           .order(DEFAULT_PRECEDENCE)
           .build();
